@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&family=Roboto+Slab:wght@100;200;300;400;500;600;700&display=swap");
+.process {
+  background-color: #fffde7;
+  padding-top: 2rem;
+}
+.process-head {
+  text-align: center;
+  margin-top: 45px;
+  letter-spacing: 0.5px;
+}
+.process-head h3 {
+  font: normal bold 45px/1 "Jost";
+  margin-bottom: 20px;
+}
+.process-head p {
+  font: normal normal 25px/40px "Jost";
+}
+.process-method {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+.process-method img {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+}
+.process-card {
+  padding: 15px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  background-color: #001e3c;
+  color: whitesmoke;
+  border-radius: 15px;
+}
+.process-method h3 {
+  font: normal normal bold 35px/1 "Jost";
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+.process-method p {
+  font: normal normal 23px/40px "Jost";
+}
+
+/* Media Querry */
+
+@media only screen and (max-width: 760px) {
+  .process-head h3,
+  .process-method h3 {
+    font: normal normal bold 25px/40px "Jost";
+    text-align: center;
+  }
+  .process-head p,
+  .process-method p {
+    font: normal normal normal 16px/30px "Jost";
+    text-align: justify;
+  }
+  .process-card {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+}

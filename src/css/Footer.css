@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&family=Roboto+Slab:wght@100;200;300;400;500;600;700&display=swap");
+
+.Footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #001e3c;
+  padding-top: 65px;
+  padding-bottom: 40px;
+  flex-wrap: wrap;
+  height: auto;
+}
+.footer-right-one {
+  margin-top: 30px;
+}
+.Footer h4 {
+  font: normal normal bold 35px/1 "Jost";
+  text-transform: capitalize;
+  margin-bottom: 15px;
+  color: white;
+  letter-spacing: 0.5px;
+}
+.footer-para {
+  font: normal normal normal 24px/1 "Jost";
+  color: white;
+  line-height: 30px;
+  letter-spacing: 0.5px;
+}
+.footer-paragraph {
+  font: normal normal 24px/45px "Jost";
+  color: white;
+  letter-spacing: 0.5px;
+  text-align: left;
+  margin-top: 2rem;
+}
+.footer-left-one {
+  width: 450px;
+}
+
+.footer-middle li {
+  list-style: none;
+}
+.footer-middle li a {
+  list-style: none;
+  color: white;
+  font: normal normal normal 24px/40px "Jost";
+  text-decoration: none;
+  margin-bottom: 10px;
+  cursor: pointer;
+  line-height: 40px;
+  margin-left: -30px;
+  letter-spacing: 0.5px;
+}
+.footer-middle li a:hover {
+  color: #f75023;
+}
+.footer-middle-two iframe {
+  width: 100%;
+}
+
+.footer-bottom {
+  background-color: #001e3c;
+  padding: 1rem 0;
+}
+
+.horizontal-line {
+  color: white;
+}
+.social-icons {
+  color: white;
+  font-size: 55px;
+  padding: 10px;
+  border: 2px solid white;
+  border-radius: 50px;
+  margin-right: 10px;
+  transition: 0.3s all ease-in-out;
+}
+.social-icons:hover {
+  transform: scale(1.1);
+}
+.social-links {
+  display: flex;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+.copyright {
+  font: normal normal 21px/1 "Jost";
+  letter-spacing: 1px;
+  text-align: center;
+  color: white;
+}
+.copyright a {
+  cursor: pointer;
+  color: aqua;
+  text-decoration: none;
+  transition: 0.5s all ease;
+}
+.copyright a:hover {
+  color: greenyellow;
+}
+
+/*  Media Querry */
+
+@media only screen and (max-width: 1060px) {
+  .Footer {
+    text-align: center;
+  }
+  .Footer h4 {
+    font: normal normal bold 28px/1 "Jost";
+  }
+  .footer-para {
+    font: normal normal normal 22px/30px "Jost";
+  }
+  .footer-paragraph {
+    font: normal normal 22px/40px "Jost";
+    padding: 10px;
+    text-align: center;
+  }
+  .footer-left {
+    margin-bottom: 20px;
+  }
+  .footer-right {
+    margin-top: 20px;
+  }
+  .footer-left-one {
+    width: 100%;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+  }
+  .social-icons {
+    font-size: 40px;
+    padding: 5px;
+  }
+  .copyright {
+    font: normal 18px/25px "Jost";
+  }
+}

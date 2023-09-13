@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&family=Roboto+Slab:wght@100;200;300;400;500;600;700&display=swap");
+.products {
+  background-color: #fffde7;
+  padding-bottom: 30px;
+  /* padding-top: 9rem; */
+}
+.product-head {
+  text-align: center;
+  padding-top: 55px;
+  margin-bottom: 5rem;
+}
+.product-head h3 {
+  font: normal normal bold 40px/1 "Jost";
+  margin-bottom: 3rem;
+  letter-spacing: 0.5px;
+}
+.product-head p {
+  font: normal normal 27px/1 "Jost";
+}
+.sample-image img {
+  width: 100%;
+  object-fit: cover;
+  height: 60vh;
+  border-radius: 15px;
+}
+
+.product-list-title {
+  margin-top: 5rem;
+  text-align: center;
+  font: normal normal bold 40px/1 "Jost";
+}
+.product-list-flex img {
+  max-width: 100%;
+  width: 550px;
+  height: 550px;
+  object-fit: cover;
+  border-bottom-right-radius: 35px;
+  border-top-left-radius: 35px;
+  transition: 0.5s all ease-in;
+}
+.product-main {
+  position: relative;
+}
+.product-caption {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
+  color: #0e1843;
+  font: normal bold 26px "Jost";
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.product-caption:hover {
+  opacity: 1;
+  border: 2px solid black;
+  transform: scale(1.2);
+  border-radius: 10px;
+  bottom: 52%;
+}
+
+.product-list-flex {
+  display: flex;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  gap: 3rem;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 760px) {
+  .product-list-flex {
+    flex-wrap: wrap;
+  }
+  .product-head {
+    margin-bottom: 3rem;
+  }
+  .product-head h3 {
+    font: normal normal bold 25px/1 "Jost";
+  }
+  .product-head p {
+    font: normal normal normal 20px/30px "Jost";
+  }
+  .product-list-title {
+    font: normal normal bold 25px/1 "Jost";
+  }
+}
