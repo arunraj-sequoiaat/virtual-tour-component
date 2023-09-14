@@ -81,7 +81,7 @@ function About() {
         </div>
         
       </div>
-      <VirtualTour customSteps={tourSteps['about']}/>
+      {/* <VirtualTour customSteps={tourSteps['about']}/> */}
     </div>
   );
 }

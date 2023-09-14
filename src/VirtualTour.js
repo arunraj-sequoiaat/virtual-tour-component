@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import "./VirtualTour.css";
 
 const VirtualTour = ({ customSteps }) => {
@@ -7,15 +8,19 @@ const VirtualTour = ({ customSteps }) => {
   const [tourClosed, setTourClosed] = useState(false);
   const [tourPosition, setTourPosition] = useState({ top: 0, left: 0 });
   const tourRef = useRef(null);
+  const navigate = useNavigate()
 
   const tourSteps = customSteps || [];
+
+  useEffect(()=>{ console.log(currentStep);}, [currentStep])
 
   const nextStep = () => {
     if (currentStep < tourSteps.length - 1) {
       const step = tourSteps[currentStep];
 
       if (step.elementType === "link") {
-        window.location.href = step.nextPage;
+        // window.location.href = step.nextPage;
+        navigate(step.nextPage)
       } else {
         setCurrentStep(currentStep + 1);
       }

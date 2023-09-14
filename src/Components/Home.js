@@ -72,10 +72,7 @@ function Home() {
             </div>
           </div>
         </div>
-      </div>
-     
-    <VirtualTour customSteps={tourSteps['home']}/>;
-     
+      </div>     
     </div>
   );
 }

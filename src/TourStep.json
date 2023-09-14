@@ -46,9 +46,7 @@
       "buttonAction": "moveToNextStep",
       "visited": false,
       "completed": false,
-      "nextPage": "/about"
-     
-
+      "nextPage": "/about" 
     },
     {
       "elementSelector": "#company-profile",

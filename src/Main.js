@@ -1,12 +1,14 @@
-import React  from "react";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Navbar from "../src/Layout/Navbar";
+import React from "react";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Footer from "../src/Layout/Footer";
-import Products from "./Components/Products";
+import Navbar from "../src/Layout/Navbar";
 import About from "./Components/About";
+import Contact from "./Components/Contact";
 import Home from "./Components/Home";
 import Process from "./Components/Process";
-import Contact from "./Components/Contact";
+import Products from "./Components/Products";
+import VirtualTour from './VirtualTour';
+import { tourSteps } from './tourStep';
 
 function Main() {
   
@@ -16,9 +18,7 @@ function Main() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-    
           <Route path="/home" element={<Home />} />
-
           <Route path="/about" element={<About />} />
           <Route path="/process" element={<Process />} />
           <Route path="/products" element={<Products />} />
@@ -26,6 +26,7 @@ function Main() {
           <Route path="*" element={<Navigate to={"/home"} replace />}  />
         </Routes>
         <Footer />
+        <VirtualTour customSteps={tourSteps} />
       </BrowserRouter>
     </>
   );
