@@ -27,6 +27,7 @@ const VirtualTour = ({ customSteps }) => {
         navigate(step.nextPage)
         setCurrentStep(currentStep + 1);
       } else {
+        navigate(step.nextElement);
         setCurrentStep(currentStep + 1);
       }
     }
@@ -34,18 +35,33 @@ const VirtualTour = ({ customSteps }) => {
 
   const handleBackButton = (previousPage, previousElement) => {
     if (previousPage) {
-
-      window.location.href = previousPage;
+      navigate(previousPage);
+      setTimeout(() => {
+        const stepIndex = tourSteps.findIndex(step => step.elementSelector === previousElement);
+        if (stepIndex !== -1) {
+          setCurrentStep(stepIndex);
+          const elementToHighlight = document.querySelector(previousElement);
+          if (elementToHighlight) {
+            setHighlightedElement(elementToHighlight);
+          }
+        }
+      }, 1000); 
     } else if (previousElement) {
-
-      setCurrentStep(previousElement);
+      const stepIndex = tourSteps.findIndex(step => step.elementSelector === previousElement +1);
+      if (stepIndex !== -1) {
+        setCurrentStep(stepIndex);
+        const elementToHighlight = document.querySelector(previousElement);
+        if (elementToHighlight) {
+          setHighlightedElement(elementToHighlight);
+        }
+      }
     } else {
-      
       if (currentStep > 0) {
         setCurrentStep(currentStep - 1);
       }
     }
   };
+  
 
   const closeTour = () => {
     setTourClosed(true);
@@ -174,7 +190,8 @@ const VirtualTour = ({ customSteps }) => {
       >
         {highlightedElement && (
           <div className="highlighted-element-info">
-            <p>{highlightedElement.id}</p>
+            {highlightedElement.id}
+            <span className="close-icon" onClick={closeTour}>x</span>
           </div>
         )}
         <div className="tour-content">
@@ -202,9 +219,6 @@ const VirtualTour = ({ customSteps }) => {
                   : "Next"}
               </button>
             )}
-            <button className="tour-button" onClick={closeTour}>
-              Skip
-            </button>
           </div>
         </div>
       </div>

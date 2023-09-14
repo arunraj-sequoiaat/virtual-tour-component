@@ -60,11 +60,11 @@ export const tourSteps = [
         "buttonAction": "moveToNextStep",
         "previousPage":"/home",
         "completed": false,
-        "previousElement":"#about1",
+        "previousElement":"#company-profile",
         "step": 5
       },
       {
-        "elementSelector": "#company-profile",
+        "elementSelector": "#certificates",
         "content": "This is the welcome section on the Home page",
         "elementType": "normal",
         "hasBackButton": true,
@@ -76,19 +76,33 @@ export const tourSteps = [
         "step": 6
       },
       {
-        "elementSelector": "#certificates",
+        "elementSelector": "#why",
         "content": "This is the about head section on the About page",
-        "elementType": "normal",
+        "elementType": "link",
         "hasBackButton": true,
         "hasNextButton": true,
         "backButtonLabel": "Back",
         "nextButtonLabel": "Next",
+        "nextPage":"/home",
         "buttonAction": "moveToNextStep",
         "completed": false,
         "step": 7
       },
       {
-        "elementSelector": "#why",
+        "elementSelector": "#home",
+        "content": "This is the welcome section on the Home page",
+        "elementType": "link",
+        "hasBackButton": true,
+        "hasNextButton": true,
+        "backButtonLabel": "Back",
+        "nextButtonLabel": "Next",
+        "buttonAction": "moveToNextStep",
+        "nextPage": "/home",
+        "completed": false,
+        "step": 8
+      },
+      {
+        "elementSelector": "#company-profile",
         "content": "This is the about head section on the About page",
         "elementType": "normal",
         "hasBackButton": true,
@@ -100,19 +114,20 @@ export const tourSteps = [
         "step": 8
       },
       {
-        "elementSelector": "#process-page",
+        "elementSelector": "#process",
         "content": "This is the about head section on the About page",
-        "elementType": "normal",
+        "elementType": "link",
         "hasBackButton": true,
         "hasNextButton": true,
         "backButtonLabel": "Back",
         "nextButtonLabel": "Next",
         "buttonAction": "moveToNextStep",
+        "nextPage": "/process",
         "completed": false,
         "step": 9
       },
       {
-        "elementSelector": "#processed",
+        "elementSelector": "#process-page",
         "content": "This is the about head section on the About page",
         "elementType": "normal",
         "hasBackButton": true,
@@ -125,7 +140,7 @@ export const tourSteps = [
       }
     ,
       {
-        "elementSelector": "#product-id",
+        "elementSelector": "#processed",
         "content": "This is the about head section on the About page",
         "elementType": "normal",
         "hasBackButton": true,
@@ -137,19 +152,20 @@ export const tourSteps = [
         "step": 11
       },
       {
-        "elementSelector": "#product-list",
+        "elementSelector": "#products",
         "content": "This is the about head section on the About page",
-        "elementType": "normal",
+        "elementType": "link",
         "hasBackButton": true,
         "hasNextButton": true,
         "backButtonLabel": "Back",
         "nextButtonLabel": "Next",
         "buttonAction":"moveToNextStep",
+        "nextPage": "/products",
         "completed": false,
         "step": 12
       }, 
         {
-        "elementSelector": "#dummy",
+        "elementSelector": "#product-id",
         "content": "This is the about head section on the About page",
         "elementType": "normal",
         "hasBackButton": true,
@@ -161,19 +177,20 @@ export const tourSteps = [
         "step": 13
       },
       {
-        "elementSelector": "#enquiry",
+        "elementSelector": "#contact",
         "content": "This is the about head section on the About page",
-        "elementType": "normal",
+        "elementType": "link",
         "hasBackButton": true,
         "hasNextButton": true,
         "backButtonLabel": "Back",
         "nextButtonLabel": "Next",
         "buttonAction": "moveToNextStep",
+        "nextPage": "/contact",
         "completed": false,
         "step": 14
       },
       {
-        "elementSelector": "#mail",
+        "elementSelector": "#enquiry",
         "content": "This is the about head section on the About page",
         "elementType": "normal",
         "hasBackButton": true,
@@ -185,6 +202,17 @@ export const tourSteps = [
         "step": 15
       }, 
       {
+        "elementSelector": "#mail",
+        "content": "This is the about head section on the About page",
+        "elementType": "button",
+        "hasBackButton": true,
+        "hasNextButton": true,
+        "backButtonLabel": "Back",
+        "nextButtonLabel": "Next",
+        "buttonAction": "moveToNextStep",
+        "completed": false,
+        "step": 16
+      }, {
         "elementSelector": "#submit",
         "content": "This is the about head section on the About page",
         "elementType": "button",
