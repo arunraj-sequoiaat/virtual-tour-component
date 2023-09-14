@@ -8,8 +8,8 @@ export const tourSteps = [
         "backButtonLabel": "Back",
         "nextButtonLabel": "Next",
         "buttonAction": "moveToNextStep",
-        "completed": false
-        
+        "completed": false,
+        "step": 1
       },
       {
         "elementSelector": "#slogan",
@@ -20,7 +20,8 @@ export const tourSteps = [
         "backButtonLabel": "Back",
         "nextButtonLabel": "Next",
         "buttonAction": "moveToNextStep",
-        "completed": false
+        "completed": false,
+        "step": 2
       },
       {
         "elementSelector": "#welcome",
@@ -31,7 +32,8 @@ export const tourSteps = [
         "backButtonLabel": "Back",
         "nextButtonLabel": "Next",
         "buttonAction": "moveToNextStep",
-        "completed": false
+        "completed": false,
+        "step": 3
       },
       {
         "elementSelector": "#about1",
@@ -44,23 +46,9 @@ export const tourSteps = [
         "buttonAction": "moveToNextStep",
         "visited": false,
         "completed": false,
-        "nextPage": "/about"
-       
-  
+        "nextPage": "/about",
+        "step": 4
       },
-      {
-        "elementSelector": "#company-profile",
-        "content": "This is the welcome section on the Home page",
-        "elementType": "normal",
-        "hasBackButton": true,
-        "hasNextButton": true,
-        "backButtonLabel": "Back",
-        "nextButtonLabel": "Next",
-        "buttonAction": "moveToNextStep",
-        "completed": false
-      }
-    ,
-  
       {
         "elementSelector": "#highlights",
         "content": "This is the about head section on the About page",
@@ -72,7 +60,20 @@ export const tourSteps = [
         "buttonAction": "moveToNextStep",
         "previousPage":"/home",
         "completed": false,
-        "previousElement":"#about1"
+        "previousElement":"#about1",
+        "step": 5
+      },
+      {
+        "elementSelector": "#company-profile",
+        "content": "This is the welcome section on the Home page",
+        "elementType": "normal",
+        "hasBackButton": true,
+        "hasNextButton": true,
+        "backButtonLabel": "Back",
+        "nextButtonLabel": "Next",
+        "buttonAction": "moveToNextStep",
+        "completed": false,
+        "step": 6
       },
       {
         "elementSelector": "#certificates",
@@ -83,7 +84,8 @@ export const tourSteps = [
         "backButtonLabel": "Back",
         "nextButtonLabel": "Next",
         "buttonAction": "moveToNextStep",
-        "completed": false
+        "completed": false,
+        "step": 7
       },
       {
         "elementSelector": "#why",
@@ -94,7 +96,8 @@ export const tourSteps = [
         "backButtonLabel": "Back",
         "nextButtonLabel": "Next",
         "buttonAction": "moveToNextStep",
-        "completed": false
+        "completed": false,
+        "step": 8
       },
       {
         "elementSelector": "#process-page",
@@ -105,7 +108,8 @@ export const tourSteps = [
         "backButtonLabel": "Back",
         "nextButtonLabel": "Next",
         "buttonAction": "moveToNextStep",
-        "completed": false
+        "completed": false,
+        "step": 9
       },
       {
         "elementSelector": "#processed",
@@ -116,7 +120,8 @@ export const tourSteps = [
         "backButtonLabel": "Back",
         "nextButtonLabel": "Next",
         "buttonAction": "moveToNextStep",
-        "completed": false
+        "completed": false,
+        "step": 10
       }
     ,
       {
@@ -128,7 +133,8 @@ export const tourSteps = [
         "backButtonLabel": "Back",
         "nextButtonLabel": "Next",
         "buttonAction": "moveToNextStep",
-        "completed": false
+        "completed": false,
+        "step": 11
       },
       {
         "elementSelector": "#product-list",
@@ -139,7 +145,8 @@ export const tourSteps = [
         "backButtonLabel": "Back",
         "nextButtonLabel": "Next",
         "buttonAction":"moveToNextStep",
-        "completed": false
+        "completed": false,
+        "step": 12
       }, 
         {
         "elementSelector": "#dummy",
@@ -150,9 +157,9 @@ export const tourSteps = [
         "backButtonLabel": "Back",
         "nextButtonLabel": "Next",
         "buttonAction":"moveToNextStep",
-        "completed": false
-      }
-,
+        "completed": false,
+        "step": 13
+      },
       {
         "elementSelector": "#enquiry",
         "content": "This is the about head section on the About page",
@@ -162,7 +169,8 @@ export const tourSteps = [
         "backButtonLabel": "Back",
         "nextButtonLabel": "Next",
         "buttonAction": "moveToNextStep",
-        "completed": false
+        "completed": false,
+        "step": 14
       },
       {
         "elementSelector": "#mail",
@@ -173,9 +181,10 @@ export const tourSteps = [
         "backButtonLabel": "Back",
         "nextButtonLabel": "Next",
         "buttonAction": "moveToNextStep",
-        "completed": false
+        "completed": false,
+        "step": 15
       }, 
-        {
+      {
         "elementSelector": "#submit",
         "content": "This is the about head section on the About page",
         "elementType": "button",
@@ -184,6 +193,7 @@ export const tourSteps = [
         "backButtonLabel": "Back",
         "nextButtonLabel": "Next",
         "buttonAction": "moveToNextStep",
-        "completed": false
+        "completed": false,
+        "step": 16
       }
 ]
