@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import "./VirtualTour.css";
-import { useStepStore } from './store/store';
+// import { useStepStore } from './store/store';
 
 const VirtualTour = ({ customSteps }) => {
   const [currentStep, setCurrentStep] = useState(0);
@@ -15,13 +15,11 @@ const VirtualTour = ({ customSteps }) => {
 
   const tourSteps = customSteps || [];
 
-
+// next button functionality
   const nextStep = () => {
     console.log("currentStep", currentStep);
-    console.log("tourSteps", tourSteps);
     if (currentStep < tourSteps.length - 1) {
       const step = tourSteps[currentStep];
-
       if (step.elementType === "link") {
         // window.location.href = step.nextPage;
         navigate(step.nextPage)
@@ -32,7 +30,7 @@ const VirtualTour = ({ customSteps }) => {
       }
     }
   };
-
+//back button functionality
   const handleBackButton = (previousPage, previousElement) => {
     if (previousPage) {
       navigate(previousPage);
@@ -46,15 +44,16 @@ const VirtualTour = ({ customSteps }) => {
           }
         }
       }, 100); 
-    } else if (previousElement) {
-      const stepIndex = tourSteps.findIndex(step => step.elementSelector === previousElement +1);
-      if (stepIndex !== -1) {
-        setCurrentStep(stepIndex);
-        const elementToHighlight = document.querySelector(previousElement);
-        if (elementToHighlight) {
-          setHighlightedElement(elementToHighlight);
-        }
-      }
+    // } else if (previousElement) {
+    //   const stepIndex = tourSteps.findIndex(step => step.elementSelector === previousElement );
+    //   if (stepIndex !== -1) {
+    //     setCurrentStep(stepIndex);
+    //     const elementToHighlight = document.querySelector(previousElement);
+    //     if (elementToHighlight) {
+    //       setHighlightedElement(elementToHighlight);
+    //       setCurrentStep(currentStep - 1);
+    //     }
+    //   }
     } else {
       if (currentStep > 0) {
         setCurrentStep(currentStep - 1);
@@ -70,7 +69,7 @@ const VirtualTour = ({ customSteps }) => {
       highlightedElement.classList.remove("highlighted");
     }
   };
-
+//positioning of the tour div according to the element position
   const calculateTourPosition = () => {
     if (highlightedElement) {
       const elementRect = highlightedElement.getBoundingClientRect();
@@ -186,14 +185,12 @@ const VirtualTour = ({ customSteps }) => {
       <div
         className={`virtual-tour ${tourClosed ? "closed" : ""}`}
         style={{ top: tourPosition.top, left: tourPosition.left }}
-        ref={tourRef}
-      >
+        ref={tourRef}>
         {highlightedElement && (
           <div className="highlighted-element-info">
             {highlightedElement.id}
             <span className="close-icon" onClick={closeTour}>x</span>
-          </div>
-        )}
+          </div>)}
         <div className="tour-content">
           <p>{tourSteps[currentStep].content}</p>
         </div>
@@ -205,20 +202,15 @@ const VirtualTour = ({ customSteps }) => {
                 onClick={() =>
                   handleBackButton(
                     tourSteps[currentStep].previousPage,
-                    tourSteps[currentStep].previousElement
-                  )
-                }
-              >
+                    tourSteps[currentStep].previousElement )}>
                 {tourSteps[currentStep].backButtonLabel || "Back"}
-              </button>
-            )}
+              </button>)}
             {currentStep < tourSteps.length - 1 && (
               <button className="tour-button" onClick={nextStep}>
                 {tourSteps[currentStep].hasNextButton
                   ? tourSteps[currentStep].nextButtonLabel
                   : "Next"}
-              </button>
-            )}
+              </button>)}
           </div>
         </div>
       </div>

@@ -1,14 +1,25 @@
-
-  @import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Oswald:wght@200;300;400&display=swap');
+:root{
+  --virtual-tour-font-family: 'Arial, Helvetica, sans-serif';
+  --virtual-tour-width: 200px;
+  --virtual-tour-max-height: 180vh;
+  --virtual-tour-background: #000000;
+  --virtual-tour-border-radius: 4px;
+  --virtual-tour-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  --virtual-tour-transition: left 0.3s ease-in-out, top 0.3s ease-in-out;
+  --virtual-tour-z-index: 100000;
+}
+ 
+ 
+ @import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Oswald:wght@200;300;400&display=swap');
 
 .virtual-tour {
-  font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     position: absolute;
     width: 200px; 
     max-height: 180vh; 
     overflow-y: auto; 
     margin-top: 10px;
-    background: #000000;
+    background: var(--virtual-tour-background);
     border-radius: 4px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
     transition: left 0.3s ease-in-out, top 0.3s ease-in-out;
@@ -89,7 +100,7 @@ z-index: 99998;
   top: 0px; 
   right: 10px;
   font-weight:800;
-   font-family:Gruppo;
+  font-family:Gruppo;
   cursor: pointer;
   font-size: 24px;
   color: #070606; 
