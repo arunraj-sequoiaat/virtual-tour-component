@@ -4,9 +4,9 @@ import "./VirtualTour.css";
 import { useStepStore } from './store/store';
 
 const VirtualTour = ({ customSteps }) => {
-  // const [currentStep, setCurrentStep] = useState(0);
-  const currentStep = useStepStore(state => state.currentStep)
-  const setCurrentStep = useStepStore(state => state.setNextStep)
+  const [currentStep, setCurrentStep] = useState(0);
+  // const currentStep = useStepStore(state => state.currentStep)
+  // const setCurrentStep = useStepStore(state => state.setNextStep)
   const [highlightedElement, setHighlightedElement] = useState(null);
   const [tourClosed, setTourClosed] = useState(false);
   const [tourPosition, setTourPosition] = useState({ top: 0, left: 0 });
@@ -45,7 +45,7 @@ const VirtualTour = ({ customSteps }) => {
             setHighlightedElement(elementToHighlight);
           }
         }
-      }, 1000); 
+      }, 100); 
     } else if (previousElement) {
       const stepIndex = tourSteps.findIndex(step => step.elementSelector === previousElement +1);
       if (stepIndex !== -1) {
