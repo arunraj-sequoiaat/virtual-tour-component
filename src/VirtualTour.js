@@ -189,8 +189,9 @@ const VirtualTour = ({ customSteps }) => {
         {highlightedElement && (
           <div className="highlighted-element-info">
             {highlightedElement.id}
-            <span className="close-icon" onClick={closeTour}>x</span>
+          
           </div>)}
+          <span className="close-icon" onClick={closeTour}>x</span>
         <div className="tour-content">
           <p>{tourSteps[currentStep].content}</p>
         </div>

@@ -6,7 +6,6 @@ import product3 from "../Assets/products/napkins.png";
 import product4 from "../Assets/products/gloves.jpg";
 import product5 from "../Assets/products/aprons.jpg";
 import product6 from "../Assets/products/potholders.jpg";
-
 import "../css/Products.css";
 
 

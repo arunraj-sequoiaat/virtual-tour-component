@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import slide1 from "../Assets/home.jpg";
 import structure from "../Assets/company.jpeg";
 import "../css/Home.css";
-import VirtualTour from "../VirtualTour";
-import tourSteps from "../TourStep.json";
 
 
 

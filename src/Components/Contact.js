@@ -1,6 +1,5 @@
 import React from "react";
 import "../css/Contact.css";
-import VirtualTour from "../VirtualTour";
 
 
 function Contact() {

@@ -32,7 +32,6 @@
   border: 1px solid #0d0c0cfd;
   background-color:#1D5E53;
   color: rgb(251, 251, 251);
-  outline: none;
   border-radius: 4px;
   padding: 5px;
   transition: border-color 0.3s ease-in-out;
@@ -42,9 +41,6 @@
  
 }
 
-.virtual-tour.closed {
-    display: none;
-}
 .tour-content {
     padding: 20px;
     margin:0 auto;
@@ -71,6 +67,11 @@ color: white;
  align-items: center;
  background-color: #000000;
 
+}
+
+.tour-buttons{
+  display: flex;
+  justify-content: space-around;
 }
 .tour-button {
 margin: 10px 5px;

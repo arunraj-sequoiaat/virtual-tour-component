@@ -5,8 +5,6 @@ import { HiUserGroup } from "react-icons/hi";
 import { IoMdPricetags } from "react-icons/io";
 import { MdHighQuality } from "react-icons/md";
 import image1 from "../Assets/Slide/slide4.jpg";
-import VirtualTour from "../VirtualTour";
-import tourSteps from "../TourStep.json";
 
 
 
