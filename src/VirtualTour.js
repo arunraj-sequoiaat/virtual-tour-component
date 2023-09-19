@@ -1,12 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import "./VirtualTour.css";
-// import { useStepStore } from './store/store';
+
 
 const VirtualTour = ({ customSteps }) => {
   const [currentStep, setCurrentStep] = useState(0);
-  // const currentStep = useStepStore(state => state.currentStep)
-  // const setCurrentStep = useStepStore(state => state.setNextStep)
   const [highlightedElement, setHighlightedElement] = useState(null);
   const [tourClosed, setTourClosed] = useState(false);
   const [tourPosition, setTourPosition] = useState({ top: 0, left: 0 });
@@ -21,7 +19,6 @@ const VirtualTour = ({ customSteps }) => {
     if (currentStep < tourSteps.length - 1) {
       const step = tourSteps[currentStep];
       if (step.elementType === "link") {
-        // window.location.href = step.nextPage;
         navigate(step.nextPage)
         setCurrentStep(currentStep + 1);
       } else {
@@ -44,16 +41,6 @@ const VirtualTour = ({ customSteps }) => {
           }
         }
       }, 100); 
-    // } else if (previousElement) {
-    //   const stepIndex = tourSteps.findIndex(step => step.elementSelector === previousElement );
-    //   if (stepIndex !== -1) {
-    //     setCurrentStep(stepIndex);
-    //     const elementToHighlight = document.querySelector(previousElement);
-    //     if (elementToHighlight) {
-    //       setHighlightedElement(elementToHighlight);
-    //       setCurrentStep(currentStep - 1);
-    //     }
-    //   }
     } else {
       if (currentStep > 0) {
         setCurrentStep(currentStep - 1);

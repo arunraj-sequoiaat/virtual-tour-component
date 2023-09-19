@@ -8,6 +8,9 @@ export const tourSteps = [
     backButtonLabel: "Back",
     nextButtonLabel: "Next",
     nextElement: "#slogan",
+    previousElement:null,
+    nextPage: null,
+    previousPage: null,
   },
   {
     elementSelector: "#slogan",
@@ -18,6 +21,9 @@ export const tourSteps = [
     backButtonLabel: "Back",
     nextButtonLabel: "Next",
     nextElement: "#welcome",
+    previousElement:"author",
+    nextPage: null,
+    previousPage: null,
   },
   {
     elementSelector: "#welcome",
@@ -28,6 +34,9 @@ export const tourSteps = [
     backButtonLabel: "Back",
     nextButtonLabel: "Next",
     nextElement: "#about1",
+    previousElement:"slogan",
+    nextPage: null,
+    previousPage: null,
   },
   {
     elementSelector: "#about1",
@@ -39,6 +48,8 @@ export const tourSteps = [
     nextButtonLabel: "Next",
     nextPage: "/about",
     nextElement: "#highlights",
+    previousElement:null,
+    previousPage: null,
   },
   {
     elementSelector: "#highlights",
@@ -48,9 +59,11 @@ export const tourSteps = [
     hasNextButton: true,
     backButtonLabel: "Back",
     nextButtonLabel: "Next",
-    previousPage: "/home",
-    previousElement: "#company-profile",
     nextElement: "#certificates",
+    previousElement: "#company-profile",
+    previousPage: "/home",
+    nextPage: null,
+  
   },
   {
     elementSelector: "#certificates",
@@ -61,6 +74,9 @@ export const tourSteps = [
     backButtonLabel: "Back",
     nextButtonLabel: "Next",
     previousElement: "#highlights",
+    nextElement: "#slogan",
+    nextPage: null,
+    previousPage: null,
   },
   {
     elementSelector: "#why",
@@ -70,7 +86,9 @@ export const tourSteps = [
     hasNextButton: true,
     backButtonLabel: "Back",
     nextButtonLabel: "Next",
+    nextElement: "#home",
     nextPage: "/home",
+    previousElement:"certificates",
   },
   {
     elementSelector: "#home",
