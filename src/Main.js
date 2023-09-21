@@ -8,7 +8,7 @@ import Home from "./Components/Home";
 import Process from "./Components/Process";
 import Products from "./Components/Products";
 import VirtualTour from './VirtualTour';
-import { tourSteps } from './tourStep';
+import { workFlows } from './tourSteps';
 
 function Main() {
   
@@ -26,7 +26,7 @@ function Main() {
           <Route path="*" element={<Navigate to={"/home"} replace />}  />
         </Routes>
         <Footer />
-        <VirtualTour customSteps={tourSteps} />
+        <VirtualTour  />
       </BrowserRouter>
     </>
   );

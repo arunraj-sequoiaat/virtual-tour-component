@@ -15,7 +15,7 @@ import image9 from "../Assets/process/10.jpeg";
 
 
 function Process() {
-  window.scrollTo(0, 0);
+
 
   const data = [
     {

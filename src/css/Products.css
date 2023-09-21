@@ -10,12 +10,12 @@
   margin-bottom: 5rem;
 }
 .product-head h3 {
-  font: normal normal bold 40px/1 "Jost";
+  font: normal normal bold 34px/1 "Jost";
   margin-bottom: 3rem;
   letter-spacing: 0.5px;
 }
 .product-head p {
-  font: normal normal 27px/1 "Jost";
+  font: normal normal 24px/1 "Jost";
 }
 .sample-image img {
   width: 100%;
@@ -31,11 +31,10 @@
 }
 .product-list-flex img {
   max-width: 100%;
-  width: 550px;
-  height: 550px;
+  width: 500px;
+  height: 350px;
   object-fit: cover;
-  border-bottom-right-radius: 35px;
-  border-top-left-radius: 35px;
+  border-radius: 30px;
   transition: 0.5s all ease-in;
 }
 .product-main {

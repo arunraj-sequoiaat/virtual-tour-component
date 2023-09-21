@@ -9,11 +9,11 @@
   letter-spacing: 0.5px;
 }
 .process-head h3 {
-  font: normal bold 45px/1 "Jost";
+  font: normal bold 40px/1 "Jost";
   margin-bottom: 20px;
 }
 .process-head p {
-  font: normal normal 25px/40px "Jost";
+  font: normal normal 20px/35px "Jost";
 }
 .process-method {
   display: flex;
@@ -23,7 +23,7 @@
 .process-method img {
   width: 200px;
   height: 200px;
-  border-radius: 15px;
+  border-radius: 50%;
 }
 .process-card {
   padding: 15px;
@@ -37,12 +37,12 @@
   border-radius: 15px;
 }
 .process-method h3 {
-  font: normal normal bold 35px/1 "Jost";
+  font: normal normal bold 25px/1 "Jost";
   letter-spacing: 1px;
   text-transform: capitalize;
 }
 .process-method p {
-  font: normal normal 23px/40px "Jost";
+  font: normal normal 20px/30px "Jost";
 }
 
 /* Media Querry */

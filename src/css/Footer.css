@@ -13,20 +13,20 @@
   margin-top: 30px;
 }
 .Footer h4 {
-  font: normal normal bold 35px/1 "Jost";
+  font: normal normal bold 30px/1 "Jost";
   text-transform: capitalize;
   margin-bottom: 15px;
   color: white;
   letter-spacing: 0.5px;
 }
 .footer-para {
-  font: normal normal normal 24px/1 "Jost";
+  font: normal normal normal 20px/23px "Jost";
   color: white;
   line-height: 30px;
   letter-spacing: 0.5px;
 }
 .footer-paragraph {
-  font: normal normal 24px/45px "Jost";
+  font: normal normal 20px/30px "Jost";
   color: white;
   letter-spacing: 0.5px;
   text-align: left;
@@ -42,7 +42,7 @@
 .footer-middle li a {
   list-style: none;
   color: white;
-  font: normal normal normal 24px/40px "Jost";
+  font: normal normal normal 20px/40px "Jost";
   text-decoration: none;
   margin-bottom: 10px;
   cursor: pointer;
@@ -67,8 +67,8 @@
 }
 .social-icons {
   color: white;
-  font-size: 55px;
-  padding: 10px;
+  font-size: 30px;
+  padding: 4px;
   border: 2px solid white;
   border-radius: 50px;
   margin-right: 10px;

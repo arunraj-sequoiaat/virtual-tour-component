@@ -36,22 +36,7 @@ function Contact() {
           </div>
         </div>
       </div>
-      <div className="contact-right-flex">
-        <div>
-          <h3>Contact Us</h3>
-          <div className="contact-section">
-            <h4>Sample app</h4>
-            <p>Tamil nadu India</p>
-          </div>
-          <div className="contact-section">
-            <h4>Phone Number</h4>
-            <p></p>
-            <p></p>
-          </div>
-          <h4>Email Id</h4>
-          <p>xyz@abc.com</p>
-        </div>
-      </div>
+
     </div>
   );
 }

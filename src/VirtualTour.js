@@ -1,38 +1,72 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import "./VirtualTour.css";
+import {workFlows} from './tourSteps';
 
 
-const VirtualTour = ({ customSteps }) => {
+const VirtualTour = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const [highlightedElement, setHighlightedElement] = useState(null);
   const [tourClosed, setTourClosed] = useState(false);
   const [tourPosition, setTourPosition] = useState({ top: 0, left: 0 });
   const tourRef = useRef(null);
   const navigate = useNavigate()
+  
+  const combinedWorkflow = [];
 
-  const tourSteps = customSteps || [];
+  let currentIndex = 0;
+  
+ 
+  for (const key in workFlows) {
+    if (workFlows.hasOwnProperty(key)) {
+      const objectsForKey = workFlows[key];
+  
+      objectsForKey.forEach((obj) => {
+        combinedWorkflow[currentIndex] = obj;
+        currentIndex++;
+      });
+    }
+  }
+
+  //  combinedWorkflow = customSteps || [];
+
 
 // next button functionality
+  // const nextStep = () => {
+  //   console.log("currentStep", currentStep);
+  //   if (currentStep < tourSteps.length - 1) {
+  //     const step = tourSteps[currentStep];
+  //     if (step.elementType === "link") {
+  //       navigate(step.nextPage)
+  //       setCurrentStep(currentStep + 1);
+  //     } else  {
+  //       navigate(step.nextElement);
+  //       // setCurrentStep(currentStep + 1);
+  //     }
+  //   }
+  // };
   const nextStep = () => {
     console.log("currentStep", currentStep);
-    if (currentStep < tourSteps.length - 1) {
-      const step = tourSteps[currentStep];
-      if (step.elementType === "link") {
-        navigate(step.nextPage)
+  
+    if (currentStep < combinedWorkflow.length - 1) {
+      const step = combinedWorkflow[currentStep];
+      if (step.elementType === "link" && step.nextPage && step.nextElement) {
+        navigate(step.nextPage);
         setCurrentStep(currentStep + 1);
-      } else {
+      } else if (step.nextElement) {
         navigate(step.nextElement);
         setCurrentStep(currentStep + 1);
       }
     }
   };
+  
+  
 //back button functionality
   const handleBackButton = (previousPage, previousElement) => {
     if (previousPage) {
       navigate(previousPage);
       setTimeout(() => {
-        const stepIndex = tourSteps.findIndex(step => step.elementSelector === previousElement);
+        const stepIndex = combinedWorkflow.findIndex(step => step.elementSelector === previousElement);
         if (stepIndex !== -1) {
           setCurrentStep(stepIndex);
           const elementToHighlight = document.querySelector(previousElement);
@@ -56,6 +90,12 @@ const VirtualTour = ({ customSteps }) => {
       highlightedElement.classList.remove("highlighted");
     }
   };
+
+  const finishTour = () => {
+    setTourClosed(true); 
+    navigate("/home");   
+  };
+  
 //positioning of the tour div according to the element position
   const calculateTourPosition = () => {
     if (highlightedElement) {
@@ -142,7 +182,7 @@ const VirtualTour = ({ customSteps }) => {
 
   useEffect(() => {
     const showStep = () => {
-      const step = tourSteps[currentStep];
+      const step = combinedWorkflow[currentStep];
       const element = document.querySelector(step.elementSelector);
 
       if (element) {
@@ -160,7 +200,7 @@ const VirtualTour = ({ customSteps }) => {
         highlightedElement.classList.remove("highlighted");
       }
     };
-  }, [currentStep, tourSteps, highlightedElement]);
+  }, [currentStep, highlightedElement]);
 
   if (tourClosed) {
     return null;
@@ -175,30 +215,34 @@ const VirtualTour = ({ customSteps }) => {
         ref={tourRef}>
         {highlightedElement && (
           <div className="highlighted-element-info">
-            {highlightedElement.id}
-          
+            {combinedWorkflow[currentStep].header}         
           </div>)}
           <span className="close-icon" onClick={closeTour}>x</span>
         <div className="tour-content">
-          <p>{tourSteps[currentStep].content}</p>
+          <p>{combinedWorkflow[currentStep].content}</p>
         </div>
         <div className="tour-navigation">
           <div className="tour-buttons">
-            {tourSteps[currentStep].hasBackButton && (
+            {combinedWorkflow[currentStep].hasBackButton && (
               <button
                 className="tour-button"
                 onClick={() =>
                   handleBackButton(
-                    tourSteps[currentStep].previousPage,
-                    tourSteps[currentStep].previousElement )}>
-                {tourSteps[currentStep].backButtonLabel || "Back"}
+                    combinedWorkflow[currentStep].previousPage,
+                    combinedWorkflow[currentStep].previousElement )}>
+                {combinedWorkflow[currentStep].backButtonLabel || "Back"}
               </button>)}
-            {currentStep < tourSteps.length - 1 && (
+            {currentStep < combinedWorkflow.length - 1 && (
               <button className="tour-button" onClick={nextStep}>
-                {tourSteps[currentStep].hasNextButton
-                  ? tourSteps[currentStep].nextButtonLabel
+                {combinedWorkflow[currentStep].hasNextButton
+                  ? combinedWorkflow[currentStep].nextButtonLabel
                   : "Next"}
               </button>)}
+              {currentStep === combinedWorkflow.length - 1 && (
+              <button className="tour-button" onClick={finishTour}>
+                Finished
+              </button>
+            )}
           </div>
         </div>
       </div>
@@ -207,12 +251,3 @@ const VirtualTour = ({ customSteps }) => {
 };
 
 export default VirtualTour;
-
-
-
-
-
-
-
-
-

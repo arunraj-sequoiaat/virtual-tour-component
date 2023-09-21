@@ -63,18 +63,18 @@
   margin-bottom: 5rem;
 }
 .app-logo {
-  font-size: 120px;
+  font-size: 100px;
   color: black;
   border-radius: 40px;
   background-color: white;
   padding: 17px;
 }
 .service-card-title {
-  font: normal normal bold 34px "Jost";
+  font: normal normal bold 25px "Jost";
   margin-top: 40px;
 }
 .service-card-content {
-  font: normal normal 24px/40px "Jost";
+  font: normal normal 20px/30px "Jost";
   margin-top: 20px;
 }
 
@@ -104,7 +104,7 @@
   text-align: center;
 }
 .quality-team p {
-  font: normal normal normal 27px/40px "Jost";
+  font: normal normal normal 23px/40px "Jost";
   margin-top: 1rem;
   text-align: center;
   padding: 5px;
@@ -142,7 +142,7 @@
   .service-card-content {
     font: normal normal 18px/35px "Jost";
   }
-  .about-head {
-    margin-top: 2rem;
-  }
+.about-head{
+  padding-top: 5px;
+}
 }

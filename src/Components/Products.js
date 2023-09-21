@@ -16,7 +16,7 @@ function Products() {
     <div className="products">
       <div className="container">
         <div className="product-head">
-          <h3 id="product-id">products page</h3>
+          <h3 id="product-id">Products</h3>
           <p>
           There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
           </p>

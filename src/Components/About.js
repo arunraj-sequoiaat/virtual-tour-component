@@ -9,13 +9,12 @@ import image1 from "../Assets/Slide/slide4.jpg";
 
 
 function About() {
-  window.scrollTo(0, 0);
 
   return (
     <div className="about">
       <div className="about-head">
         <div className="container">
-          <h3 id="highlights">This is about page</h3>
+          <h3 id="highlights">About Page</h3>
           <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
           </p>
@@ -39,30 +38,23 @@ function About() {
       <div className="home-service-card">
         <div className="card-one">
           <TbTruckDelivery className="app-logo" />
-          <h4 className="service-card-title">Dummy text</h4>
+          <h4 className="service-card-title">Second Section</h4>
           <p className="service-card-content">
           Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old
           </p>
         </div>
         <div className="card-two">
           <HiUserGroup className="app-logo" />
-          <h4 className="service-card-title" id="customer">Dummy test</h4>
+          <h4 className="service-card-title" id="customer">Second Section</h4>
           <p className="service-card-content">
           Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old
           </p>
         </div>
         <div className="card-three">
           <IoMdPricetags className="app-logo" />
-          <h4 className="service-card-title">simply random text.</h4>
+          <h4 className="service-card-title">Second Section</h4>
           <p className="service-card-content">
-          Contrary to popular belief, Lorem Ipsum is not simply random text.
-          </p>
-        </div>
-        <div className="card-four">
-          <MdHighQuality className="app-logo" />
-          <h4 className="service-card-title">simply random text.</h4>
-          <p className="service-card-content">
-          Contrary to popular belief, Lorem Ipsum is not simply random text.
+          Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old
           </p>
         </div>
       </div>
@@ -71,7 +63,7 @@ function About() {
           <img src={image1}></img>
         </div>
         <div className="quality-content">
-          <h3>simply random text</h3>
+          <h3>Third Section</h3>
           <p>
           There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration <br /> supervisions of our Q.A. Team. Hopefully
             the same can be noticed on the pictures

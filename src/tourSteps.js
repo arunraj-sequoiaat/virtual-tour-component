@@ -1,45 +1,66 @@
-export const tourSteps = [
-  {
+
+
+export const workFlows = {
+  "home-page-workflow": [
+    {
+      elementSelector: "#title",
+      header:"Title card",
+      content: "This is the title on the Home page",
+      elementType: "normal",
+      hasBackButton: false,
+      backButtonLabel: "Back",
+      hasNextButton: true,
+      nextButtonLabel: "Next",
+      previousPage: null,
+      previousElement:null,
+      nextPage: null,
+      nextElement: "#author",
+    },
+    {
     elementSelector: "#author",
+    header:"author name",
     content: "This is the name of the author on the Home page",
     elementType: "normal",
-    hasBackButton: false,
-    hasNextButton: true,
+    hasBackButton: true,
     backButtonLabel: "Back",
+    hasNextButton: true,
     nextButtonLabel: "Next",
-    nextElement: "#slogan",
+    previousPage: null,
     previousElement:null,
     nextPage: null,
-    previousPage: null,
+    nextElement: "#slogan",
   },
   {
     elementSelector: "#slogan",
+    header:"slogan",
     content: "This is the slogan section on the Home page",
     elementType: "normal",
     hasBackButton: true,
-    hasNextButton: true,
     backButtonLabel: "Back",
+    hasNextButton: true,
     nextButtonLabel: "Next",
-    nextElement: "#welcome",
+    previousPage: null,
     previousElement:"author",
     nextPage: null,
-    previousPage: null,
+    nextElement: "#welcome",
   },
   {
     elementSelector: "#welcome",
+    header:"welcoming you",
     content: "This is the welcome section on the Home page",
     elementType: "normal",
     hasBackButton: true,
-    hasNextButton: true,
     backButtonLabel: "Back",
+    hasNextButton: true,
     nextButtonLabel: "Next",
-    nextElement: "#about1",
+    previousPage: null,
     previousElement:"slogan",
     nextPage: null,
-    previousPage: null,
+    nextElement: "#about1",
   },
   {
     elementSelector: "#about1",
+    header:"Link to about",
     content: "This is the link to join section on the about page",
     elementType: "link",
     hasBackButton: true,
@@ -51,8 +72,11 @@ export const tourSteps = [
     previousElement:null,
     previousPage: null,
   },
+],
+"about-page-workflow": [
   {
     elementSelector: "#highlights",
+    header:"highlighted section",
     content: "This is the highlight section on the About page",
     elementType: "normal",
     hasBackButton: true,
@@ -67,6 +91,7 @@ export const tourSteps = [
   },
   {
     elementSelector: "#certificates",
+    header:"certificates",
     content: "This is the certificates section on the Home page",
     elementType: "normal",
     hasBackButton: true,
@@ -80,6 +105,7 @@ export const tourSteps = [
   },
   {
     elementSelector: "#why",
+    header:"why is this",
     content: "This is the why section on the About page",
     elementType: "link",
     hasBackButton: true,
@@ -90,8 +116,12 @@ export const tourSteps = [
     nextPage: "/home",
     previousElement:"certificates",
   },
+],
+
+"home-page-workflow2":  [
   {
     elementSelector: "#home",
+    header:"Home page ",
     content: "This is the home tab on the Home page",
     elementType: "link",
     hasBackButton: true,
@@ -99,11 +129,13 @@ export const tourSteps = [
     backButtonLabel: "Back",
     nextButtonLabel: "Next",
     nextPage: "/home",
+    nextElement: "#company-profile",
     previousPage: "/about",
     previousElement: "#why",
   },
   {
     elementSelector: "#company-profile",
+    header:"profile of the company",
     content: "This is the company profile section on the About page",
     elementType: "normal",
     hasBackButton: true,
@@ -113,10 +145,13 @@ export const tourSteps = [
     buttonAction: "moveToNextStep",
     previousPage: "/home",
     previousElement: "#about1",
-    nextElement: "#certificates",
+    nextElement: "#process-page",
   },
+],
+"process-page-workflow": [
   {
     elementSelector: "#process",
+    header:"process page link",
     content: "This is the process section on the About page",
     elementType: "link",
     hasBackButton: true,
@@ -127,9 +162,11 @@ export const tourSteps = [
     previousPage: "/home",
     previousElement: "#company-profile",
     nextPage: "/process",
+    nextElement: "#process-page",
   },
   {
     elementSelector: "#process-page",
+    header:"process page ",
     content: "This is the process page section on the About page",
     elementType: "normal",
     hasBackButton: true,
@@ -137,9 +174,11 @@ export const tourSteps = [
     backButtonLabel: "Back",
     nextButtonLabel: "Next",
     buttonAction: "moveToNextStep",
+    nextElement: "#processed",
   },
   {
     elementSelector: "#processed",
+    header:"second process",
     content: "This is the processed section on the About page",
     elementType: "normal",
     hasBackButton: true,
@@ -147,9 +186,13 @@ export const tourSteps = [
     backButtonLabel: "Back",
     nextButtonLabel: "Next",
     buttonAction: "moveToNextStep",
+    nextElement: "#products",
   },
+],
+"product-page-workflow":[
   {
     elementSelector: "#products",
+    header:"products page link",
     content: "This is the products section on the About page",
     elementType: "link",
     hasBackButton: true,
@@ -159,20 +202,27 @@ export const tourSteps = [
     buttonAction: "moveToNextStep",
     previousPage: "/process",
     previousElement: "#processed",
+    nextElement: "#product-id",
     nextPage: "/products",
   },
   {
     elementSelector: "#product-id",
+    header:"first product",
     content: "This is the  product details section on the About page",
     elementType: "normal",
     hasBackButton: true,
     hasNextButton: true,
     backButtonLabel: "Back",
     nextButtonLabel: "Next",
+    nextElement: "#contact",
     buttonAction: "moveToNextStep",
+
   },
+],
+"contact-page-workflow":  [
   {
     elementSelector: "#contact",
+    header:"contact page",
     content: "This is the  contact section on the About page",
     elementType: "link",
     hasBackButton: true,
@@ -183,9 +233,11 @@ export const tourSteps = [
     previousPage: "/products",
     previousElement: "#product-id",
     nextPage: "/contact",
+    nextElement: "#enquiry",
   },
   {
     elementSelector: "#enquiry",
+    header:"enquire here",
     content: "This is the enquiry section on the About page",
     elementType: "normal",
     hasBackButton: true,
@@ -193,9 +245,11 @@ export const tourSteps = [
     backButtonLabel: "Back",
     nextButtonLabel: "Next",
     buttonAction: "moveToNextStep",
+    nextElement: "#mail",
   },
   {
     elementSelector: "#mail",
+    header:"mail id here",
     content: "This is the mail section on the About page",
     elementType: "button",
     hasBackButton: true,
@@ -203,9 +257,11 @@ export const tourSteps = [
     backButtonLabel: "Back",
     nextButtonLabel: "Next",
     buttonAction: "moveToNextStep",
+    nextElement: "#submit",
   },
   {
     elementSelector: "#submit",
+    header:"click to submit",
     content: "This is the about head section on the About page",
     elementType: "button",
     hasBackButton: true,
@@ -213,5 +269,15 @@ export const tourSteps = [
     backButtonLabel: "Back",
     nextButtonLabel: "Next",
     buttonAction: "moveToNextStep",
+    nextPage: "/home"
   },
-];
+]
+}
+
+
+
+
+
+
+
+

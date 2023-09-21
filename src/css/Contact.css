@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&family=Roboto+Slab:wght@100;200;300;400;500;600;700&display=swap");
 
-.contact-map iframe {
-  width: 500px;
-  height: 400px;
-}
 .contact {
   display: flex;
   justify-content: center;
@@ -11,7 +7,6 @@
   padding-bottom: 4rem;
   flex-wrap: wrap;
   padding-top: 5rem;
-  background-color: #e8eaf6;
   z-index: -1111;
 }
 .contact-left-flex {
@@ -22,7 +17,7 @@
   border-radius: 14px;
 }
 .contact-left-flex h3 {
-  font: normal normal bold 42px/1 "Jost";
+  font: normal normal bold 33px/1 "Jost";
   margin-top: 3rem;
   margin-bottom: 3rem;
 }
@@ -30,11 +25,11 @@
   margin-bottom: 1.5rem;
 }
 .enquiry-form label {
-  font: normal bold 25px/1 "Jost";
+  font: normal bold 20px/1 "Jost";
   margin-bottom: 20px;
 }
 .input-div input {
-  padding: 16px 30px;
+  padding: 16px 10px;
   border: none;
   outline: none;
   width: 400px;
@@ -43,7 +38,7 @@
   height: 120px;
 }
 ::placeholder {
-  font: normal normal 20px/1 "Jost";
+  font: normal normal 15px/1 "Jost";
 }
 .submit-btn {
   display: flex;
@@ -55,7 +50,7 @@
   border: none;
   outline: none;
   padding: 15px 55px;
-  background-color: black;
+  background-color: #001e3c;
   color: white;
   font: normal 18px/1 "Jost";
   letter-spacing: 1px;
@@ -65,7 +60,7 @@
   align-items: center;
 }
 .contact-right-flex h3 {
-  font: normal normal bold 42px/1 "Jost";
+  font: normal normal bold 35px/1 "Jost";
   letter-spacing: 0.5px;
   margin-bottom: 50px;
 }

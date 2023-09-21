@@ -5,13 +5,7 @@ import slide1 from "../Assets/home.jpg";
 import structure from "../Assets/company.jpeg";
 import "../css/Home.css";
 
-
-
-
-
 function Home() {
-  window.scrollTo(0, 0);
-
   const pageDurationTwo = {
     in: {
       opacity: 1,
@@ -48,29 +42,41 @@ function Home() {
           <h3 id="author"> - William A. Foster</h3>
         </div>
         <div className="home-mid-content">
-          <div className="mid-content-left">
-            <img src={structure} />
-          </div>
           <div>
             <div className="mid-content-right">
               <h3 id="welcome">Welcome to my app</h3>
 
               <p>
-              Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of 
-              <Link to="/about"id="about1" >About Us</Link>
+                Contrary to popular belief, Lorem Ipsum is not simply random
+                text. It has roots in a piece of classical Latin literature from
+                45 BC, making it over 2000 years old. Richard McClintock, a
+                Latin professor at Hampden-Sydney College in Virginia, looked up
+                one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in
+                classical literature, discovered the undoubtable source. Lorem
+                Ipsum comes from sections <br/>
+                <Link to="/about" id="about1">
+                  About Us
+                </Link>
               </p>
             </div>
             <div className="mid-content-right">
               <h3 id="company-profile">Company's Profile</h3>
 
               <p>
-              Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of 
-              
+                Contrary to popular belief, Lorem Ipsum is not simply random
+                text. It has roots in a piece of classical Latin literature from
+                45 BC, making it over 2000 years old. Richard McClintock, a
+                Latin professor at Hampden-Sydney College in Virginia, looked up
+                one of the more obscure Latin words, consectetur, from a Lorem
+                Ipsum passage, and going through the cites of the word in
+                classical literature, discovered the undoubtable source. Lorem
+                Ipsum comes from sections
               </p>
             </div>
           </div>
         </div>
-      </div>     
+      </div>
     </div>
   );
 }
